@@ -27,3 +27,13 @@ variable "instance_name" {
   type        = string
   default     = "ec-gitlabci"
 }
+
+variable "profile" {
+  type    = string
+  default = "default"
+}
+
+variable "region-master" {
+  type    = string
+  default = "us-east-1"
+}
