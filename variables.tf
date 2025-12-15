@@ -7,11 +7,13 @@ variable "region" {
 variable "vpc_id" {
   description = "VPC ID"
   type        = string
+  default     = "vpc-0e1c6892ff3d7eeaa"
 }
 
 variable "ami_id" {
   description = "AMI ID for EC2"
   type        = string
+  default     = " ami-0ecb62995f68bb549"
 }
 
 variable "instance_type" {
@@ -23,5 +25,5 @@ variable "instance_type" {
 variable "instance_name" {
   description = "Name tag for EC2"
   type        = string
-  default     = "my-ec2"
+  default     = "ec-gitlabci"
 }
