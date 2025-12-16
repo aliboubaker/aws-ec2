@@ -11,6 +11,6 @@ terraform {
     region  = "us-east-1"
     profile = "default"
     key     = "terraformstatefile"
-    bucket  = "name-of-already-created-buckettest"
+    bucket  = "terrrrrrrterrrrrr"
   }
 }

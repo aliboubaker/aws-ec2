@@ -4,11 +4,7 @@ variable "region" {
   default     = "us-east-1"
 }
 
-variable "vpc_id" {
-  description = "VPC ID"
-  type        = string
-  default     = "vpc-0e1c6892ff3d7eeaa"
-}
+
 
 variable "ami_id" {
   description = "AMI ID for EC2"
@@ -34,3 +30,7 @@ variable "profile" {
 }
 
 
+  
+
+
+  
