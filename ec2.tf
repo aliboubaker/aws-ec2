@@ -20,7 +20,7 @@ resource "aws_key_pair" "generated" {
   public_key = tls_private_key.ssh_key.public_key_openssh
 
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
 }
 

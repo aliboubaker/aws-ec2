@@ -4,3 +4,4 @@
 crash.log
 *.pem
 *.lock.hcl
+*.pem

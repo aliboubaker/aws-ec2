@@ -18,3 +18,7 @@ data "aws_availability_zones" "azs" {
   state = "available"
 }
 
+#Get already , publicly configured Hosted Zone on Route53 - MUST EXIST, check variables.tf for dns-name
+data "aws_route53_zone" "dns" {
+  name     = var.dns-name
+}

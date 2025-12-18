@@ -5,6 +5,7 @@ locals {
     apt-get install -y docker.io docker-compose
     systemctl enable docker
     systemctl start docker
+    sudo usermod -aG docker ubuntu
   EOF
 
   gitlab_runner_user_data = <<-EOF
@@ -13,6 +14,8 @@ locals {
     apt-get install -y gitlab-runner docker.io
     systemctl enable docker gitlab-runner
     systemctl start docker gitlab-runner
+    sudo usermod -aG docker gitlab-runner
+    sudo usermod -aG docker ubuntu
   EOF
 
   instances = {
@@ -47,5 +50,13 @@ locals {
       executor  = "shell"
       user_data = local.gitlab_runner_user_data
     }
+  }
+}
+
+locals {
+  instance_ports = {
+    "deploy-dev"     = 3000
+    "deploy-staging" = 4000
+    "deploy-prod"    = 5000
   }
 }

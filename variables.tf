@@ -31,6 +31,9 @@ variable "profile" {
 
 
   
-
+variable "dns-name" {
+  type    = string
+  default = "657177702650.realhandsonlabs.net." # e.g "cmcloudlab1234.info."
+}
 
   
